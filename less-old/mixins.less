@@ -616,7 +616,13 @@
     .offsetX (@gridColumns);
 
   }
-
+	
+  .core {
+    .span (@columns) {
+      width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+    }
+  }
+	
   .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
